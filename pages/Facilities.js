@@ -13,6 +13,6 @@ const Facilities = ({}) => {
         </ul>
         </div>
     )
-}
+} 
 
 export default Facilities;
