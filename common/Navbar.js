@@ -1,63 +1,74 @@
-import Link from "next/link";
 import React from "react";
-import Image from "next/image";
-const Navbar = () => {
-  return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-info mb-4 p-2">
-        <button
-          class="navbar-toggler "
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div className="logo">
-          <Link href="/"> <Image src="/vercel.svg" height={20} width={100} /></Link>
-        </div>
+import Link from 'next/link';
+import styles from "../styles/Navbar.module.scss";
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav col-lg-8">
-            <li class="nav-item active">
-              <Link className="nav-link" href="/about">
-                About
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link className="nav-link" href="/Contact">
-                Contact
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link href="/courses" className="nav-link">
-                Courses
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link className="nav-link" href="/Facilities">
-                Facilities
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link className="nav-link" href="/Product">
-                Products
-              </Link>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-            />
-          </form>
+const Navbar = ({}) => {
+    return(
+        <div className={styles.navbar}>
+
+      <nav className="navbar navbar-expand-lg  bg-primary">
+        <div className="container">
+          <a className="navbar-brand" href="/">
+            Ecommerce
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div
+            className="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link text-white fw-bold" href="/">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white fw-bold" href="/about">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white fw-bold" href="/courses">
+                  Courses
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white fw-bold" href="/facilities">
+                  Facilities
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white fw-bold" href="/contact">
+                  Contact
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white fw-bold" href="/batches">
+                  Batches
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white fw-bold" href="/products">
+                  Products
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </div>
-  );
-};
+
+    )
+}
+
 export default Navbar;
