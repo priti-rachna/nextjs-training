@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "John",
+      "description": "John Doe"
+    },
+    {
+      "id": 2,
+      "title": "John",
+      "description": "John Doe"
+    },
+    {
+      "title": "One plus",
+      "desc": "Cool one",
+      "id": 3
+    }
+  ]
+}
